@@ -1,9 +1,10 @@
 import Hero from "@/components/Hero";
-import Awards from "@/components/Awards";
-import About from "@/components/About";
+import Composer from "@/components/Composer";
 import SoundDesign from "@/components/SoundDesign";
 import Discography from "@/components/Discography";
-import Advertising from "@/components/Advertising";
+import Credits from "@/components/Credits";
+import About from "@/components/About";
+import Awards from "@/components/Awards";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
@@ -11,11 +12,12 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Awards />
-      <About />
+      <Composer />
       <SoundDesign />
       <Discography />
-      <Advertising />
+      <Credits />
+      <About />
+      <Awards />
       <ContactForm />
       <Footer />
     </>

@@ -46,7 +46,7 @@ const Hero = () => {
             {texts[language].hero.cta1}
           </Link>
           <Link
-            to="discography"
+            to="composer"
             smooth={true}
             duration={600}
             offset={-80}

@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { useState } from "react";
-import { IoPlay, IoPause } from "react-icons/io5";
+import { IoImageOutline, IoPause, IoPlay } from "react-icons/io5";
+import texts from "@/constants/texts";
+import { useLanguage } from "@/context/LanguageContext";
 
 interface Track {
   id: number;
@@ -18,6 +20,7 @@ interface TrackItemProps {
 }
 
 const TrackItem = ({ track, isActive, onClick }: TrackItemProps) => {
+  const { language } = useLanguage();
   const [hasImageError, setHasImageError] = useState(false);
 
   return (
@@ -41,8 +44,14 @@ const TrackItem = ({ track, isActive, onClick }: TrackItemProps) => {
             onError={() => setHasImageError(true)}
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center text-xs text-gray-500">
-            Cover not available
+          <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-3 bg-gray-200 text-center">
+            <IoImageOutline
+              className="text-3xl text-gray-400 shrink-0"
+              aria-hidden
+            />
+            <span className="text-xs font-medium text-gray-500 leading-tight">
+              {texts[language].discography.imageNotAvailable}
+            </span>
           </div>
         )}
       </div>

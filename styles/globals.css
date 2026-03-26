@@ -2,28 +2,100 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom Scrollbar for Modern Browsers */
+/* Scrollbar palette — matches gray-900 + yellow accent */
+:root {
+  --scrollbar-track: #111827;
+  --scrollbar-track-mute: #0f172a;
+  --scrollbar-thumb: #ca8a04;
+  --scrollbar-thumb-mid: #eab308;
+  --scrollbar-thumb-hover: #facc15;
+  --scrollbar-thumb-glow: #fef08a;
+  --scrollbar-size: 9px;
+}
+
+/* ----- Document / global scrollbar ----- */
+html {
+  scrollbar-color: var(--scrollbar-thumb-mid) var(--scrollbar-track);
+  scrollbar-width: thin;
+}
+
+html::-webkit-scrollbar {
+  width: var(--scrollbar-size);
+  height: var(--scrollbar-size);
+}
+
+html::-webkit-scrollbar-track {
+  background: linear-gradient(
+    180deg,
+    var(--scrollbar-track-mute) 0%,
+    var(--scrollbar-track) 40%,
+    var(--scrollbar-track) 100%
+  );
+}
+
+html::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    var(--scrollbar-thumb-glow) 0%,
+    var(--scrollbar-thumb-mid) 45%,
+    var(--scrollbar-thumb) 100%
+  );
+  border-radius: 9999px;
+  border: 2px solid var(--scrollbar-track);
+  background-clip: padding-box;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    #fef9c3 0%,
+    var(--scrollbar-thumb-hover) 50%,
+    var(--scrollbar-thumb-mid) 100%
+  );
+  border-color: var(--scrollbar-track-mute);
+}
+
+html::-webkit-scrollbar-corner {
+  background: var(--scrollbar-track);
+}
+
+/* ----- Overflow areas (e.g. Composer) ----- */
+.custom-scrollbar {
+  scrollbar-color: var(--scrollbar-thumb-mid) var(--scrollbar-track);
+  scrollbar-width: thin;
+}
+
 .custom-scrollbar::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: var(--scrollbar-bg, #1a1a1a);
-  border-radius: 10px;
+  background: rgba(17, 24, 39, 0.85);
+  border-radius: 9999px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb, #ffd700);
-  border-radius: 10px;
+  background: linear-gradient(
+    180deg,
+    var(--scrollbar-thumb-glow) 0%,
+    var(--scrollbar-thumb-mid) 50%,
+    var(--scrollbar-thumb) 100%
+  );
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: var(--scrollbar-thumb-hover, #ffc300);
+  background: linear-gradient(
+    180deg,
+    #fef9c3 0%,
+    var(--scrollbar-thumb-hover) 55%,
+    var(--scrollbar-thumb-mid) 100%
+  );
 }
 
-/* Scrollbar for Firefox */
-.custom-scrollbar {
-  scrollbar-color: var(--scrollbar-thumb, #ffd700) var(--scrollbar-bg, #1a1a1a);
-  scrollbar-width: thin;
+.custom-scrollbar::-webkit-scrollbar-corner {
+  background: transparent;
 }

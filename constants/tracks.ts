@@ -103,7 +103,6 @@ const tracks = [
     album: "9 Cuentos Destartalados EP",
     credits: "Mastering Engineer",
     link: "https://modestogalan.bandcamp.com/album/9-cuentos-destartalados?search_item_id%3D3703788494%26search_item_type%3Da%26search_match_part%3D%253F%26search_page_id%3D5143365625%26search_page_no%3D0%26search_rank%3D2=",
-    image: "https://source.unsplash.com/600x600/?vinyl,record",
   },
   {
     id: 13,
@@ -146,7 +145,6 @@ const tracks = [
     album: "Vol.1",
     credits: "Music Producer, Recording & Mixing Engineer",
     link: "https://tribopccs.bandcamp.com/album/vol-1",
-    image: "https://source.unsplash.com/600x600/?jazz,band",
   },
   {
     id: 18,
@@ -161,16 +159,14 @@ const tracks = [
     id: 19,
     artist: "YABocc",
     credits: "Mixing & Mastering Engineer — Dolby Atmos",
-    link: "https://music.apple.com/mx/playlist/d%C3%ADnamo-studio-atmos/pl.u-76oNko6tNA23XM",
-    image: "https://source.unsplash.com/600x600/?atmos,surround",
+    link: "https://music.apple.com/mx/artist/yabocc-yone-alvarez-boccardo/1849503716",
   },
   {
     id: 20,
     artist: "Yatu",
     album: "En el bar 61",
     credits: "Keyboards, Mixing & Mastering Engineer",
-    link: "https://drive.google.com/drive/folders/1fxwts5guMUa2oIRBtbgctuOxno9-PmJM?usp=drive_link",
-    image: "https://source.unsplash.com/600x600/?bar,jazz",
+    link: "https://www.youtube.com/playlist?list=PL6gOeqne7kjT9Ebx7DRSpO62vF2CcA1Hk",
   },
 ];
 

@@ -5,10 +5,38 @@ const texts = {
       logoHighlight: "Saez",
       navItems: {
         home: "Inicio",
+        composer: "Composición",
+        soundDesign: "Diseño sonoro & Mezcla",
         discography: "Discografía",
-        multimedia: "Multimedia",
+        credits: "Créditos",
+        bio: "Bio",
+        awards: "Premios",
         contact: "Contacto",
       },
+    },
+
+    composer: {
+      subtitle: "Composición",
+      title: "Compositor",
+      description:
+        "Música para cine y publicidad: selección por estilo y campañas en video.",
+      tabFilm: "Música para cine",
+      tabAdvertising: "Publicidad",
+      advertisingBlurb:
+        "Piezas de publicidad donde firmo como compositor.",
+      pickTrack: "Elige un tema para ver el video.",
+    },
+
+    credits: {
+      subtitle: "Créditos",
+      title: "Filmografía y créditos",
+      description:
+        "Lista de proyectos y roles. El enlace lleva a material adicional en Google Drive.",
+      driveCta: "Abrir carpeta en Google Drive",
+    },
+
+    videoPlayer: {
+      select: "Selecciona un proyecto para ver el video.",
     },
 
     hero: {
@@ -38,11 +66,12 @@ const texts = {
     discography: {
       subtitle: "Discografía",
       title: "Mis Producciones",
+      imageNotAvailable: "Imagen no disponible",
     },
 
     soundDesign: {
-      subtitle: "Diseño Sonoro",
-      title: "Sound Design",
+      subtitle: "Diseño sonoro & mezcla",
+      title: "Sound Design & Mix",
     },
 
     multimedia: {
@@ -85,10 +114,38 @@ const texts = {
       logoHighlight: "Saez",
       navItems: {
         home: "Home",
+        composer: "Composer",
+        soundDesign: "Sound Design & Mix",
         discography: "Discography",
-        multimedia: "Multimedia",
+        credits: "Credits",
+        bio: "Bio",
+        awards: "Awards",
         contact: "Contact",
       },
+    },
+
+    composer: {
+      subtitle: "Composition",
+      title: "Composer",
+      description:
+        "Music for film and advertising — curated by style, plus selected commercial spots.",
+      tabFilm: "Film Music",
+      tabAdvertising: "Advertising",
+      advertisingBlurb:
+        "Advertising work where I am credited as composer.",
+      pickTrack: "Select a cue to watch the video.",
+    },
+
+    credits: {
+      subtitle: "Credits",
+      title: "Credits & filmography",
+      description:
+        "Project list and roles. The link opens additional materials on Google Drive.",
+      driveCta: "Open Google Drive folder",
+    },
+
+    videoPlayer: {
+      select: "Select a project to watch the video.",
     },
 
     hero: {
@@ -118,11 +175,12 @@ const texts = {
     discography: {
       subtitle: "Discography",
       title: "My Productions",
+      imageNotAvailable: "Image not available",
     },
 
     soundDesign: {
-      subtitle: "Sound Design",
-      title: "Sound Design",
+      subtitle: "Sound design & mix",
+      title: "Sound Design & Mix",
     },
 
     multimedia: {

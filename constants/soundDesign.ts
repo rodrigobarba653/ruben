@@ -1,31 +1,40 @@
-const soundDesignProjects = [
+type SoundProject = {
+  id: number;
+  title: string;
+  role: string;
+  category: string;
+  image?: string;
+  videoUrl?: string;
+};
+
+const soundDesignProjects: SoundProject[] = [
   {
     id: 1,
     title: "All I Ever Wanted (Emmy Winner)",
-    role: "Sound Design / 5.1 Mix",
+    role: "Composer / Sound Design / 5.1 Mix",
     category: "Cine & TV",
-    image: "/sounddesign/all-i-ever-wanted.jpg",
+    videoUrl: "https://www.youtube.com/embed/WFcoxtnKlDA",
   },
   {
     id: 2,
-    title: "Chavorrucos",
-    role: "Sound Design / 5.1 Mix",
+    title: "Chavorrucos (Amazon Prime)",
+    role: "Composer / Sound Design / 5.1 Mix",
     category: "Cine & TV",
-    image: "/sounddesign/chavorrucos.jpg",
+    videoUrl: "https://www.youtube.com/embed/jCj8lh91Yo4",
   },
   {
     id: 3,
     title: "Culpables",
-    role: "Sound Design / 5.1 Mix",
+    role: "Composer / Sound Design / 5.1 Mix",
     category: "Cine & TV",
-    image: "/sounddesign/culpables.jpg",
+    videoUrl: "https://www.youtube.com/embed/SSNoTTO0Vfo",
   },
   {
     id: 4,
     title: "Despedida de soltera",
-    role: "Sound Design / 5.1 Mix",
+    role: "Composer / Sound Design / 5.1 Mix",
     category: "Cine & TV",
-    image: "/sounddesign/despedida-de-solteras.jpg",
+    videoUrl: "https://www.youtube.com/embed/BhmlR9XB8FE",
   },
   {
     id: 5,
@@ -99,11 +108,10 @@ const soundDesignProjects = [
   },
   {
     id: 15,
-    title: "Opa Popa Dupa (Temporadas 1–4) (Emmy Nominee)",
-    role:
-      "Head of Audio / Music Supervisor / Sound Design / 5.1 Mix",
+    title: "Opa Popa Dupa (Temporadas 1–4) (Emmy Nominee) (Disney Plus)",
+    role: "Head of Audio / Music Supervisor / Sound Design / 5.1 Mix",
     category: "Cine & TV",
-    image: "/sounddesign/opa-popa-dupa.jpg",
+    videoUrl: "https://www.youtube.com/embed/5hN03u9muEg",
   },
   {
     id: 16,
@@ -129,9 +137,9 @@ const soundDesignProjects = [
   {
     id: 19,
     title: "Va por Diego (Cannes World Winner)",
-    role: "Sound Design / 5.1 Mix",
+    role: "Composer / Sound Design / 5.1 Mix",
     category: "Cine & TV",
-    image: "/sounddesign/va-por-diego.jpg",
+    videoUrl: "https://www.youtube.com/embed/R2zsCNMYETM",
   },
   {
     id: 20,
@@ -144,16 +152,9 @@ const soundDesignProjects = [
   {
     id: 21,
     title: "World Justice Project - Justicia para sanar",
-    role: "Sound Design / Stereo Mix",
+    role: "Composer / Sound Design / 5.1 Mix",
     category: "Cine & TV",
     image: "/sounddesign/wjp-mediacion-indigena.jpg",
-  },
-  {
-    id: 30,
-    title: "Diablo IV Teaser",
-    role: "Sound Design / Stereo Mix",
-    category: "Video Game",
-    videoUrl: "https://www.youtube.com/embed/OIcLmYzJtqY",
   },
   {
     id: 40,
@@ -209,7 +210,7 @@ const soundDesignProjects = [
     title: "Los Amigos Invisibles - Me espera",
     role: "Sound Design / Mix",
     category: "Videoclips",
-    videoUrl: "",
+    videoUrl: "https://www.youtube.com/embed/ZSpSMI1Ea9o",
   },
   {
     id: 48,
@@ -221,7 +222,7 @@ const soundDesignProjects = [
   {
     id: 49,
     title: "Tony Dize - Quisiera",
-    role: "Sound Design / Mix",
+    role: "Intro - Outro Music / Sound Design / Mix",
     category: "Videoclips",
     videoUrl: "https://www.youtube.com/embed/Md3a3-V4pLw",
   },
@@ -239,7 +240,55 @@ const soundDesignProjects = [
     category: "Videoclips",
     videoUrl: "https://www.youtube.com/embed/YTvd0w-Sx0A",
   },
+  {
+    id: 60,
+    title: "Buchannans",
+    role: "Sound Design / Mix",
+    category: "Advertising",
+    videoUrl: "https://player.vimeo.com/video/174827511",
+  },
+  {
+    id: 61,
+    title: "La Carta",
+    role: "Composer / Sound Design / Mix",
+    category: "Advertising",
+    videoUrl: "https://player.vimeo.com/video/442159586",
+  },
+  {
+    id: 62,
+    title: "Hit BlackOut",
+    role: "Composer / Sound Design / Mix",
+    category: "Advertising",
+    videoUrl: "https://player.vimeo.com/video/12285593",
+  },
+  {
+    id: 63,
+    title: "Hit Conquista",
+    role: "Composer / Sound Design / Mix",
+    category: "Advertising",
+    videoUrl: "https://player.vimeo.com/video/12285724",
+  },
+  {
+    id: 64,
+    title: "Dish - Mundial",
+    role: "Composer / Sound Design / Mix",
+    category: "Advertising",
+    videoUrl: "https://player.vimeo.com/video/997077530",
+  },
+  {
+    id: 30,
+    title: "Diablo IV Teaser - Abuelo",
+    role: "Sound Design / Mix",
+    category: "Video Game",
+    videoUrl: "https://www.youtube.com/embed/OIcLmYzJtqY?start=1",
+  },
+  {
+    id: 31,
+    title: "Diablo IV Teaser - Abuela",
+    role: "Sound Design / Mix",
+    category: "Video Game",
+    videoUrl: "https://www.youtube.com/embed/xeQGakCqAFA",
+  },
 ];
 
 export default soundDesignProjects;
-

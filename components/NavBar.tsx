@@ -40,7 +40,7 @@ const Navbar = () => {
       </Link>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex">
+      <div className="hidden md:flex md:flex-wrap md:items-center md:justify-end md:gap-y-2 md:max-w-[calc(100%-12rem)]">
         <NavLinks />
         {/* Language Toggle Button */}
         <button
