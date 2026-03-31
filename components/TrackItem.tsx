@@ -19,18 +19,30 @@ interface TrackItemProps {
   onClick: () => void;
 }
 
+/** These CDNs often block or throttle Next.js image optimization fetches. */
+function imageShouldUseUnoptimized(src: string) {
+  return /mzstatic\.com|sndcdn\.com|soundcloud\.com|scdn\.co|bcbits\.com|img\.youtube\.com|i\.ytimg\.com/i.test(
+    src,
+  );
+}
+
 const TrackItem = ({ track, isActive, onClick }: TrackItemProps) => {
   const { language } = useLanguage();
   const [hasImageError, setHasImageError] = useState(false);
+  const useUnoptimizedImage =
+    track.image != null && imageShouldUseUnoptimized(track.image);
+
   const platform = track.link.includes("spotify.com")
     ? "Spotify"
     : track.link.includes("bandcamp.com")
       ? "Bandcamp"
       : track.link.includes("music.apple.com")
         ? "Apple Music"
-        : track.link.includes("youtube.com")
-          ? "YouTube"
-          : "External";
+        : track.link.includes("soundcloud.com")
+          ? "SoundCloud"
+          : track.link.includes("youtube.com")
+            ? "YouTube"
+            : "External";
 
   return (
     <a
@@ -50,6 +62,7 @@ const TrackItem = ({ track, isActive, onClick }: TrackItemProps) => {
             fill
             sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
             className="object-cover"
+            unoptimized={useUnoptimizedImage}
             onError={() => setHasImageError(true)}
           />
         ) : (

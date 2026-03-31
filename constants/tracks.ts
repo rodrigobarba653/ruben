@@ -102,7 +102,8 @@ const tracks = [
     artist: "Modesto Galan",
     album: "9 Cuentos Destartalados EP",
     credits: "Mastering Engineer",
-    link: "https://modestogalan.bandcamp.com/album/9-cuentos-destartalados?search_item_id%3D3703788494%26search_item_type%3Da%26search_match_part%3D%253F%26search_page_id%3D5143365625%26search_page_no%3D0%26search_rank%3D2=",
+    link: "https://modestogalan.bandcamp.com/album/9-cuentos-destartalados",
+    image: "https://f4.bcbits.com/img/a2839748713_10.jpg",
   },
   {
     id: 13,
@@ -145,6 +146,7 @@ const tracks = [
     album: "Vol.1",
     credits: "Music Producer, Recording & Mixing Engineer",
     link: "https://tribopccs.bandcamp.com/album/vol-1",
+    image: "https://f4.bcbits.com/img/a2917961446_10.jpg",
   },
   {
     id: 18,
@@ -160,6 +162,8 @@ const tracks = [
     artist: "YABocc",
     credits: "Mixing & Mastering Engineer — Dolby Atmos",
     link: "https://music.apple.com/mx/artist/yabocc-yone-alvarez-boccardo/1849503716",
+    image:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/85/28/9b/85289bdc-ec57-4cd3-b311-5134c67b6087/artwork.jpg/600x600bb.jpg",
   },
   {
     id: 20,
@@ -167,6 +171,7 @@ const tracks = [
     album: "En el bar 61",
     credits: "Keyboards, Mixing & Mastering Engineer",
     link: "https://www.youtube.com/playlist?list=PL6gOeqne7kjT9Ebx7DRSpO62vF2CcA1Hk",
+    image: "https://img.youtube.com/vi/qWSKqWnilaI/hqdefault.jpg",
   },
 ];
 
