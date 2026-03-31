@@ -15,9 +15,10 @@ const Hero = () => {
       <div className="absolute inset-0">
         <Image
           src="/bg-hero.jpg"
-          alt="Background"
-          layout="fill"
-          objectFit="cover"
+          alt=""
+          fill
+          className="object-cover"
+          sizes="100vw"
           quality={80}
           priority
         />

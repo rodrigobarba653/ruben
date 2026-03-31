@@ -1,6 +1,6 @@
 import texts from "@/constants/texts";
 import { useLanguage } from "@/context/LanguageContext";
-import { creditEntries } from "@/constants/credits";
+import { creditEntries, creditsImdbUrl } from "@/constants/credits";
 
 const Credits = () => {
   const { language } = useLanguage();
@@ -14,6 +14,14 @@ const Credits = () => {
           {t.title}
         </h2>
         <p className="text-gray-600 mt-3 max-w-2xl">{t.description}</p>
+        <a
+          href={creditsImdbUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center mt-5 rounded-full border border-gray-900 px-5 py-2 text-sm font-semibold text-gray-900 transition hover:bg-gray-900 hover:text-white"
+        >
+          {t.imdbCta}
+        </a>
 
         <ul className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-4">
           {creditEntries.map((row) => (

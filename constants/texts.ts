@@ -30,9 +30,8 @@ const texts = {
     credits: {
       subtitle: "Créditos",
       title: "Filmografía y créditos",
-      description:
-        "Lista de proyectos y roles. El enlace lleva a material adicional en Google Drive.",
-      driveCta: "Abrir carpeta en Google Drive",
+      description: "Lista de proyectos y roles seleccionados.",
+      imdbCta: "Ver IMDb",
     },
 
     videoPlayer: {
@@ -139,9 +138,8 @@ const texts = {
     credits: {
       subtitle: "Credits",
       title: "Credits & filmography",
-      description:
-        "Project list and roles. The link opens additional materials on Google Drive.",
-      driveCta: "Open Google Drive folder",
+      description: "Selected projects and roles.",
+      imdbCta: "View IMDb",
     },
 
     videoPlayer: {

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
-import { IoImageOutline, IoPause, IoPlay } from "react-icons/io5";
+import { IoPause, IoPlay } from "react-icons/io5";
 import texts from "@/constants/texts";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -22,6 +22,15 @@ interface TrackItemProps {
 const TrackItem = ({ track, isActive, onClick }: TrackItemProps) => {
   const { language } = useLanguage();
   const [hasImageError, setHasImageError] = useState(false);
+  const platform = track.link.includes("spotify.com")
+    ? "Spotify"
+    : track.link.includes("bandcamp.com")
+      ? "Bandcamp"
+      : track.link.includes("music.apple.com")
+        ? "Apple Music"
+        : track.link.includes("youtube.com")
+          ? "YouTube"
+          : "External";
 
   return (
     <a
@@ -44,14 +53,24 @@ const TrackItem = ({ track, isActive, onClick }: TrackItemProps) => {
             onError={() => setHasImageError(true)}
           />
         ) : (
-          <div className="w-full h-full flex flex-col items-center justify-center gap-2 px-3 bg-gray-200 text-center">
-            <IoImageOutline
-              className="text-3xl text-gray-400 shrink-0"
-              aria-hidden
-            />
-            <span className="text-xs font-medium text-gray-500 leading-tight">
-              {texts[language].discography.imageNotAvailable}
+          <div className="w-full h-full flex flex-col justify-between p-4 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-white">
+            <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-white/70">
+              {platform}
             </span>
+            <div>
+              <p className="text-base font-semibold leading-tight">
+                {track.artist}
+              </p>
+              {track.album ? (
+                <p className="mt-1 text-sm text-white/75 line-clamp-2">
+                  {track.album}
+                </p>
+              ) : (
+                <p className="mt-1 text-xs text-white/60">
+                  {texts[language].discography.imageNotAvailable}
+                </p>
+              )}
+            </div>
           </div>
         )}
       </div>

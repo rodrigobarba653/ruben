@@ -1,6 +1,4 @@
-/** Full credits list + Drive portfolio (client-provided) */
-export const creditsDriveUrl =
-  "https://drive.google.com/drive/folders/1ikM7f18RxAF8nwYTiwd4yoloTTi2ipA8?usp=drive_link";
+export const creditsImdbUrl = "https://imdb.me/rubensaez";
 
 export interface CreditEntry {
   project: string;
